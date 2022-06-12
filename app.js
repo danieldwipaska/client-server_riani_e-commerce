@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+import homeRoute from './routes/home.js';
 
 //MIDDLEWARES
 app.use(expressEjsLayouts);
@@ -15,12 +16,7 @@ app.use(express.static(`${__dirname}/public`)); // make files able to access
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 //ROUTES
-app.get('/', (req, res) => {
-  res.render('index', {
-    layout: 'layouts/main-layout',
-    title: 'Riani S | E-Commerce',
-  });
-});
+app.use('/', homeRoute);
 
 //LISTEN
 const port = process.env.PORT || 3000;
