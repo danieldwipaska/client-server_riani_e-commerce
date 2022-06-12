@@ -1,0 +1,21 @@
+{
+  "name": "project2-riani-web",
+  "version": "1.0.0",
+  "description": "riani e-commerce",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "startDev": "nodemon app.js"
+  },
+  "author": "Daniel Kamasi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
